@@ -51,17 +51,12 @@ var/
 *.egg
 
 # Data and results
-*.tif
-*.tiff
+
 biomass_results_*/
 biomass_predictions_*/
 *.h5
 *.hdf5
-*.pkl
 *.joblib
-*.pt
-!model.pt
-!model_package.pkl
 
 # OS specific
 .DS_Store

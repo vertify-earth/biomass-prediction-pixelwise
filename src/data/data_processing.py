@@ -8,7 +8,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader, TensorDataset
 import logging
 from typing import Dict, List, Tuple, Optional
-from feature_engineering import extract_features_for_training
+from src.data.feature_engineering import extract_features_for_training
 
 # Configure logger
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

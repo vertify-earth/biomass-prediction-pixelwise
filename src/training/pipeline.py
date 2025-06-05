@@ -10,10 +10,10 @@ import json
 import sys
 from tqdm import tqdm
 
-from config import BiomassPipelineConfig
-from model import initialize_model
-from data_processing import prepare_training_data
-from train import BiomassModelTrainer
+from configs.config import BiomassPipelineConfig
+from src.models.model import initialize_model
+from src.data.data_processing import prepare_training_data
+from src.training.train import BiomassModelTrainer
 
 # Configure logger
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

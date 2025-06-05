@@ -2,13 +2,16 @@
 """
 Main entry point for biomass prediction pipeline
 """
-import os
+
 import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import argparse
 import logging
 from datetime import datetime
-from config import BiomassPipelineConfig
-from pipeline import BiomassPredictionPipeline
+from configs.config import BiomassPipelineConfig
+from src.training.pipeline import BiomassPredictionPipeline
 
 # Configure logger
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -58,7 +61,7 @@ def main():
         # Deploy to HuggingFace if requested
         if args.deploy:
             try:
-                from huggingface_deploy import prepare_huggingface_repo, deploy_to_huggingface
+                from deployment.huggingface_deploy import prepare_huggingface_repo, deploy_to_huggingface
                 import tempfile
                 
                 print("\n" + "="*70)

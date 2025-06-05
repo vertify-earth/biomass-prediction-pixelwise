@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 
 # Make sure the model module is in path
 sys.path.append(os.path.dirname(__file__))
-from model import StableResNet
+from src.models.model import StableResNet
 
 class BiomassPredictionInference:
     """Class for running biomass prediction inference"""

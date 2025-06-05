@@ -217,7 +217,7 @@ def load_model_package(package_path, model_path=None, device=None):
             model_path = os.path.join(os.path.dirname(package_path), 'model.pt')
         
         # Load model
-        from model import StableResNet
+        from src.models.model import StableResNet
         model = StableResNet(n_features=package['n_features'])
         model.load_state_dict(torch.load(model_path, map_location=device))
         model.to(device)
